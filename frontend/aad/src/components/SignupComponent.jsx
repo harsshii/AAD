@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Signup.css';
 
 function SignupComponent() {
@@ -8,6 +8,7 @@ function SignupComponent() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('user'); // Default role is set to 'user'
+  const navigate = useNavigate();
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -17,6 +18,13 @@ function SignupComponent() {
     console.log("Email:", email);
     console.log("Password:", password);
     console.log("Role:", role);
+
+    // Redirect based on role
+    if (role === 'admin') {
+      navigate('/dashboard');
+    } else {
+      navigate('/home');
+    }
   };
 
   return (

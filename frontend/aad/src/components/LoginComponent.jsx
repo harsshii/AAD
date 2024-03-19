@@ -1,19 +1,32 @@
 import { useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function LoginComponent() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('user'); // Default role is set to 'user'
-
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
     // Handle login logic here
     console.log("Email:", email);
     console.log("Password:", password);
     console.log("Role:", role);
+    // Redirect based on role
+    if (role === 'admin') {
+      navigate('/dashboard');
+    } else {
+      navigate('/home');
+    }
   };
+  
+ 
+  
+    
+     
+  
+  
 
   return (
     <div className="login-container">

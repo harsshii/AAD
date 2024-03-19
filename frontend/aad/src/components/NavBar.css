@@ -1,5 +1,5 @@
 body {
-    background: #7160b5;
+    background: #ffffff;
     font-family: 'Lexend Exa', sans-serif;
   }
   
@@ -45,7 +45,7 @@ body {
   nav ul li a {
     display: block;
     padding: 15px;
-    color: #2375D8;
+    color: #050505;
     text-transform: uppercase;
     transition: color 0.2s;
   }
@@ -82,7 +82,7 @@ body {
   
   nav ul li ul li a {
     padding: 10px;
-    color: #2375D8;
+    color: #020202;
   }
   
   nav ul li ul li a:hover {
@@ -192,10 +192,10 @@ body {
   }
 
   .button {
-    background-color: #ecdf4e; /* Set button background color */
+    background-color: #f66ba7; /* Set button background color */
     color: #070707; /* Set button text color */
     padding: 10px 15px; /* Set padding */
-    border: lightblue; /* Remove border */
+    border: rgb(7, 7, 7); /* Remove border */
     border-radius: 50px; /* Add border radius */
     text-decoration: none; /* Remove underline */
     cursor: pointer; /* Add cursor pointer */

@@ -91,7 +91,7 @@
   
   .header nav ul li ul li a {
     padding: 10px;
-    color: #2375d8;
+    color: #050505;
   }
   
   .header nav ul li ul li a:hover {
@@ -99,7 +99,7 @@
   }
   
   :root {
-    --hero-background: url('pexels-oleksandr-p-3036525.jpg');
+    --hero-background: url('pexels-jonathan-borba-5610375.jpg');
    
     --services-background: url('your-services-background-image-url');
     /* Add more variables for other sections if needed */
@@ -107,33 +107,50 @@
   
   /* Update styles to use CSS variables */
   .hero {
-    padding-top: 80px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: var(--hero-background); 
-    background-size: cover;
+  padding-top: 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: var(--hero-background); 
+  background-size: cover;
+}
+
+.hero .container {
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #070709;
+}
+
+.italic-font {
+  font-family: 'Your-Cursive-Italian-Font', cursive; /* Replace 'Your-Cursive-Italian-Font' with the font name you choose */
+}
+
+.animated-text {
+  animation: slideIn 2s ease-in-out infinite alternate;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
   }
-  
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
   .services {
     padding-top: 80px;
     padding-bottom: 80px;
     background-image: var(--services-background); /* Use CSS variable for background */
-  }
-  
-  .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #070709;
-  }
-  
-  .hero p {
-    font-size: 24px;
-    margin-bottom: 40px;
-    color: #070709;
   }
   
   .btn {
@@ -240,11 +257,16 @@ img {
   max-width: 100%;
 }
 
+.aboutt{
+  padding-top: 50px;
+}
 
 .about-section {
+  
   width: 50%;
   height: 100vh;
 }
+
 
 
 .left-header {
@@ -263,7 +285,7 @@ img {
   background-color: #fff;
   position: absolute;
   content: '';
-  bottom: 50px;
+  bottom: 10px;
   margin: 0 1rem;
 }
 .icons
@@ -444,4 +466,16 @@ img {
   max-width: 100%;
   height: auto;
   margin: auto;
+}
+
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ padding-left: 60px;
+}
+.box{
+  padding: 20px;
+  padding-right: 300px;
 }

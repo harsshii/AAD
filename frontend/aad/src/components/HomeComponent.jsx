@@ -2,9 +2,13 @@
 
 import './HomeComponent.css';
 import NavBar from './NavBar';
+import Footer from './Footer';
 import Slider from 'react-slick';
+import { MDBInput, MDBCheckbox, MDBBtn, MDBValidation, MDBValidationItem, MDBTextArea } from 'mdb-react-ui-kit';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
 
 const HomeComponent = () => {
   const settings = {
@@ -42,6 +46,8 @@ const HomeComponent = () => {
   };
 
   return (
+    <div>
+
     <div className="home-page">
       <NavBar />
       <section className="hero">
@@ -77,20 +83,20 @@ const HomeComponent = () => {
         <div className="image-slider">
           <h2>Gallery</h2>
           <Slider {...settings}>
-            <div><img src="pexels-oleksandr-p-3036525.jpg" alt="Gallery Image 1" /></div>
-            <div><img src="https://images.pexels.com/photos/6479601/pexels-photo-6479601.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 2" /></div>
+            <div><img src="https://images.pexels.com/photos/6211414/pexels-photo-6211414.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 1" /></div>
+            <div><img src="https://images.pexels.com/photos/8384310/pexels-photo-8384310.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 2" /></div>
             <div><img src="https://images.pexels.com/photos/12876490/pexels-photo-12876490.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 3" /></div>
-            <div><img src="https://images.pexels.com/photos/12876490/pexels-photo-12876490.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 4" /></div>
-            <div><img src="https://images.pexels.com/photos/12876490/pexels-photo-12876490.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 5" /></div>
-            <div><img src="https://images.pexels.com/photos/12876490/pexels-photo-12876490.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 6" /></div>
-            <div><img src="https://images.pexels.com/photos/12876490/pexels-photo-12876490.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 7" /></div>
-            <div><img src="https://images.pexels.com/photos/12876490/pexels-photo-12876490.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 8" /></div>
-            <div><img src="https://images.pexels.com/photos/12876490/pexels-photo-12876490.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 9" /></div>
-            <div><img src="https://images.pexels.com/photos/12876490/pexels-photo-12876490.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 10" /></div>
+            <div><img src="https://images.pexels.com/photos/16813352/pexels-photo-16813352/free-photo-of-hello-kitty-birthday-cake-with-decor.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 4" /></div>
+            <div><img src="https://images.pexels.com/photos/6210763/pexels-photo-6210763.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 5" /></div>
+            <div><img src="https://images.pexels.com/photos/6113613/pexels-photo-6113613.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 6" /></div>
+            <div><img src="https://images.pexels.com/photos/6479601/pexels-photo-6479601.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Gallery Image 7" /></div>
+
           </Slider>
         </div>
       </section>
       <section className="about" id="about">
+      <div className='aboutt'>
+        
       <div className="col-lg-9 col-xl-8" style={{justifyContent:'center',alignContent:'center',alignItems:'center',marginLeft:'250px',color:'#26867e'}}>
 <div className="main-content p-5">
   <div className="main-header mb-4">
@@ -104,9 +110,9 @@ const HomeComponent = () => {
     </div>
     <div className="col-md-8">
       <div className="about__text mb-5 mb-sm-4 mb-md-4">
-        <h3>PARTY WORX</h3>
+        <h3>EVENT PARTY WORX</h3>
         <center>
-        <h5 style={{color:'black',fontSize:'15px'}}>Expert event planners specializing in unforgettable birthday celebrations, crafting personalized 
+        <h5 style={{color:'black',fontSize:'15px'}}>Expert event planners specializing in unforgettable Birthday celebrations,corporate events,Weddings,Holiday parties personalized 
         experiences tailored to your unique preferences and desires.</h5>
         </center>
       </div>
@@ -155,6 +161,7 @@ const HomeComponent = () => {
       </div>
     </div>
   </div>
+      <div className='abt'>
 
     <div className="row no-gutters pt-5 border-top">
       <div className="mb-4 mb-md-0 pr-sm-3 p-md-0 col-sm-6 col-md-3">
@@ -200,19 +207,60 @@ const HomeComponent = () => {
 
 </div>
 </div>
+      </div>
+      </div>
       </section>
       <section className="contact" id="contact">
-        <div className="container">
-          <h2>Contact Us</h2>
-          <form>
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email" />
-            <textarea placeholder="Message"></textarea>
-            <button className="btn btn__primary">Send Message</button>
-          </form>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+
+<div className="container2">
+  <div style={{ display: 'block', textAlign: 'center' }}>
+    <div>
+      <h2 >Anytime, Anywhere, Any device.</h2>
+      <h1 className='sd'>We are here!! Let us Talk</h1>
+      <h2 >Get your free Advice about the <br></br>Plans and Packages that suits you</h2>
+    </div>
+    <div className="counselling">
+      <img src='https://res.cloudinary.com/dbhfpccxj/image/upload/v1709657996/counselling_jefu2s.png' alt="Counselling" style={{ width: '200px', height: '200px' }} />
+    </div>
+  </div>
+</div>
+
+<div className='box'>
+          <MDBValidation noValidate id='form' className='text-center' style={{ width: '100%', maxWidth: '300px' }}>
+            <h2>Contact us</h2>
+
+            <MDBValidationItem invalid feedback='Please provide your name.'>
+              <MDBInput label='Name' v-model='name' wrapperClass='mb-4' required />
+            </MDBValidationItem>
+
+            <MDBValidationItem invalid feedback='Please provide your email.'>
+              <MDBInput type='email' label='Email address' v-model='email' wrapperClass='mb-4' required />
+            </MDBValidationItem>
+
+            <MDBValidationItem invalid feedback='Please provide mail subject.'>
+              <MDBInput label='Subject' v-model='subject' wrapperClass='mb-4' required />
+            </MDBValidationItem>
+
+            <MDBValidationItem invalid feedback='Please provide a message text.'>
+              <MDBTextArea wrapperClass='mb-4' label='Message' required />
+            </MDBValidationItem>
+
+            <MDBValidationItem feedback=''>
+              <MDBCheckbox wrapperClass='d-flex justify-content-center' label='Send me copy' />
+            </MDBValidationItem>
+
+            <MDBBtn type='submit' color='primary' block className='my-4'>
+              Send
+            </MDBBtn>
+          </MDBValidation>
         </div>
-      </section></div>
-    
+      </div>
+    </section>
+   
+      </div>
+    <Footer/>
+    </div>
   );
 };
 
