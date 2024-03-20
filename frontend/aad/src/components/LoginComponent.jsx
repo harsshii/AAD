@@ -1,32 +1,22 @@
 import { useState } from 'react';
 import './Login.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 function LoginComponent() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('user'); // Default role is set to 'user'
   const navigate = useNavigate();
+  const location = useLocation();
+  const { from } = location.state || { from: { pathname: '/payment' } }; // Get the previous location or default to '/booking'
+
   const handleLogin = (e) => {
     e.preventDefault();
     // Handle login logic here
     console.log("Email:", email);
     console.log("Password:", password);
-    console.log("Role:", role);
-    // Redirect based on role
-    if (role === 'admin') {
-      navigate('/dashboard');
-    } else {
-      navigate('/home');
-    }
+    // Redirect to the previous page after login
+    navigate(from);
   };
-  
- 
-  
-    
-     
-  
-  
 
   return (
     <div className="login-container">
@@ -43,15 +33,7 @@ function LoginComponent() {
             <label htmlFor="password" className="form-label">Password</label>
             <input type="password" className="form-control" id="password" placeholder="Enter password" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
-          <div className="form-group">
-            <label htmlFor="role" className="form-label">Role</label>
-            <select id="role" className="form-control" value={role} onChange={(e) => setRole(e.target.value)}>
-              <option value="user">User</option>
-              <option value="admin">Admin</option>
-            </select>
-          </div>
           <button type="submit" className="login-button">Login</button>
-         
         </form>
 
         <div className="social-media">
